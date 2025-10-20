@@ -8,6 +8,14 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
+
+    public UserEntity(String userName, String password, String name, String email) {
+        this.userName = userName;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+    }
+
     private String userName;
     private String password;
     private String name;
